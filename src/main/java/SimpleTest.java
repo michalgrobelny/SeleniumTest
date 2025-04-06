@@ -34,7 +34,7 @@ public class SimpleTest {
 
         TakesScreenshot screenshot = ((TakesScreenshot) driver);
         File file = screenshot.getScreenshotAs(OutputType.FILE);
-        file.renameTo(new File("screenshot.png"));
+        file.renameTo(new File(System.getProperty("user.dir"), "screenshot.png"));
 
         driver.quit();
         System.exit(0);
