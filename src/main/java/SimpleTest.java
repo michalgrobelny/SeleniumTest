@@ -32,11 +32,12 @@ public class SimpleTest {
 
         Thread.sleep(2000);
 
-        System.out.println("Before taking a screenshot!");
+        System.out.println(System.getProperty("user.dir"));
 
-        TakesScreenshot screenshot = ((TakesScreenshot) driver);
-        File file = screenshot.getScreenshotAs(OutputType.FILE);
-        file.renameTo(new File(System.getProperty("user.dir"), "screenshot.png"));
+        String screenshotPath = "screenshot.png"; // Save to current working directory
+        File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        File destFile = new File(screenshotPath);
+        Files.copy(file.toPath(), destFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
 
         driver.quit();
         System.exit(0);
