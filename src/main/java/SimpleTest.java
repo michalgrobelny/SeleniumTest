@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.OutputType;
 import java.nio.file.StandardCopyOption;
+import java.nio.file.Files;
 
 import java.time.Duration;
 import java.io.File;
