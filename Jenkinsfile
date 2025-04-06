@@ -1,11 +1,6 @@
 pipeline {
     agent any
-
-    tools {
-        jdk 'jdk-17'             // Match the name set in Jenkins tools
-        maven 'maven-3.8.6'      // Match the name set in Jenkins tools
-    }
-
+    
     stages {
         stage('Build') {
             steps {
