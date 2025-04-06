@@ -37,5 +37,6 @@ public class SimpleTest {
         file.renameTo(new File("screenshot.png"));
 
         driver.quit();
+        System.exit(0);
     }
 }
