@@ -32,6 +32,8 @@ public class SimpleTest {
 
         Thread.sleep(2000);
 
+        System.out.println("Before taking a screenshot!");
+
         TakesScreenshot screenshot = ((TakesScreenshot) driver);
         File file = screenshot.getScreenshotAs(OutputType.FILE);
         file.renameTo(new File(System.getProperty("user.dir"), "screenshot.png"));
