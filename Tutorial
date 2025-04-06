@@ -5,3 +5,5 @@ docker run -d -p 8080:8080 -p 50000:50000 --name my-jenkins custom-jenkins
 docker exec -it my-jenkins cat /var/jenkins_home/secrets/initialAdminPassword
 
 Jenkins UI → http://localhost:8080
+
+chromedriver 135.0.7049.52
